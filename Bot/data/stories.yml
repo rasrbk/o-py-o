@@ -1,0 +1,21 @@
+version: "2.0"
+
+stories:
+
+- story: saudação
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - checkpoint: tipos_de_locais
+
+- story: local aberto
+  steps:
+  - checkpoint: tipos_de_locais    
+  - intent: aberto
+  - action: utter_lugar_aberto
+
+- story: local fechado
+  steps:
+  - checkpoint: tipos_de_locais
+  - intent: fechado
+  - action: utter_greet

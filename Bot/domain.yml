@@ -1,0 +1,39 @@
+version: "2.0"
+
+intents:
+  - greet
+  - aberto
+  - fechado
+
+responses:
+  utter_greet:
+  - text: "Olá! Que tipo de lugar você gosta de ir?"
+    buttons:
+    - title: "Lugares fechados"
+      payload: "Fechados"
+    - title: "Lugares aberto"
+      payload: "Abertos"
+
+  utter_lugar_aberto:
+  - text: "Que tal ir no parque?"
+    image: "https://correio-cdn1.cworks.cloud/fileadmin/_processed_/1/c/csm_Parque_dos_Ventos_Secom_PMS_aed88d3e54.jpeg"
+
+  utter_lugar_fechado:
+  - text: "Que tal ir no shopping?"
+    image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/19/f3/90/73/salvador-shopping.jpg?w=1200&h=1200&s=1"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_iamabot:
+  - text: "I am a bot, powered by Rasa."
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
